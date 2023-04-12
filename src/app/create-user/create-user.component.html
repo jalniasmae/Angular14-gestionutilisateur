@@ -1,0 +1,28 @@
+
+<p>create-user works!</p>
+
+
+<div class="col-md-6 offset-md-3">
+    <h1>Create User Record</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="number" class="form-control" id="id" name="id
+            " [(ngModel)]="user.id
+            ">
+            <label for="cuid">CUID</label>
+            <input type="text" class="form-control" id="cuid" name="cuid" [(ngModel)]="user.cuid"
+            >
+            <label for="firstName">FirstName</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="user.firstName"
+            >
+            <label for="lastName">LastName</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="user.laststName">
+            
+            <label for="birthday">Birthday</label>
+            <input type="date" class="form-control" id="birthDate" name="birthDate"  [(ngModel)]="user.birthDate" >
+            <br>
+            <button class="btn btn-success" type="submit">Sumbit</button>
+            </div>
+    </form>
+</div>

@@ -1,0 +1,33 @@
+
+<p>user-list works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">CUID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Birthday</th>
+        <th scope="col">CreatedDate</th>
+        <th scope="col">UpdatedDate</th>
+        <th > Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.cuid}}</td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.laststName}}</td>
+        <td>{{user.birthDate |  date: 'shortDate' }}</td>
+        <!-- <td>{{user.createDate |  date: 'shortDate'}}</td> -->
+        <td>{{user.createDate |  date: 'shortDate' }}</td>
+        <td>{{user.updateDate |  date: 'shortDate' }}</td>
+        <td>
+            <button (click)="updateUser(user.id)" class="btn btn-primary">Update</button>
+            <button (click)="deleteUser(user.id)" class="btn btn-danger" style="margin-left:  10px;">Delete</button>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
